@@ -1,7 +1,5 @@
-# HtmlToJson
- 把html 代码转换成数组，适合小程序的展示，同时里面有把远程资源转换成本地图片
  # HtmlToJson
- 把html 代码转换成数组，适合小程序的展示，同时里面有把远程资源转换成本地图片
+ 把html 代码转换成数组，适合小程序的展示，同时里面有把远程资源转换成本地图片(可做参考，如果有不懂可以联系:  wx:[wanghui119c]  共同进步)
 > html to json 用法
 ```
  $html = '<div id="LeftTool" class="LeftTool"></div>
