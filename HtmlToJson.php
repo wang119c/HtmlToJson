@@ -40,6 +40,27 @@ class HtmlToJson
         return $this->arrToJson($ret);
     }
 
+	/**
+     * 转成html
+     * @param $jsonArr
+     * Created by PhpStorm.
+     * Author:huizi
+     * Date: 2019/5/31-16:57
+     * @return string
+     */
+    public function toHtml($jsonArr){
+        $html = "";
+        foreach ($jsonArr as $key=>$value){
+            if($value['type'] == "text"){
+                $html .= "<p style='margin-bottom: 5px'>".$value['value']."</p>";
+            }
+            if( $value['type'] == "image" ){
+                $html .= "<img src='".$value['value']."' style='width: 100%'></img>";
+            }
+        }
+        return $html;
+    }
+
     /**
      * 数组转化成json对象
      * @param $array
@@ -50,7 +71,7 @@ class HtmlToJson
      * @throws ParameterException
      * @throws \think\Exception
      */
-    public function arrToJson($array)
+    private function arrToJson($array)
     {
         $jsonArr = [];
         foreach ($array as $key => $val) {
@@ -171,7 +192,7 @@ class HtmlToJson
      * Date: 2019/5/28-17:26
      * @return array
      */
-    function elementToObj($element, &$ret)
+    private function elementToObj($element, &$ret)
     {
         if (!isset($element->tagName)) {
             return $ret;
