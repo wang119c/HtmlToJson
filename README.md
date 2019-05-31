@@ -37,3 +37,8 @@ array(27) {
 $imgUrl = "//inews.gtimg.com/newsapp_bt/0/7676817611/1000";
 (new HtmlToJson())->imgCoverNative($imgUrl);
 ```
+
+> json2html
+```
+(new HtmlToJson())->toHtml($json); (准确的说应该是数组)
+```
